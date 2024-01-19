@@ -1,0 +1,156 @@
+:root {
+	--black-color: #212529;
+	--white-color: #f1f3f5;
+	--gray-color: #adb5bd;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	user-select: text;
+}
+
+html {
+	font-size: 62.5%;
+	background-color: var(--black-color);
+}
+
+body {
+	padding: 6.2rem 9.6rem;
+	height: 100svh;
+	width: 100svw;
+	color: var(--white-color);
+	font-family: "Sora", sans-serif;
+	/* FONT-WEIGHT: 300 (LIGHT) - 400 (REGULAR) - 500 (MEDIUM) - 700 (BOLD) */
+	font-size: 1.8rem;
+	font-weight: 400;
+	overflow: hidden;
+}
+
+*::selection {
+	color: var(--black-color);
+	background-color: var(--white-color);
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a:link,
+a:visited,
+.discord {
+	color: var(--white-color);
+	text-decoration: none;
+	font-weight: 500;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+	color: var(--gray-color);
+	fill: var(--gray-color);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+}
+
+.upper {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	height: 70%;
+}
+
+.profile {
+	display: flex;
+	flex-direction: column;
+	gap: 1.8rem;
+}
+
+.profile img {
+	width: 16rem;
+	height: 16rem;
+	border-radius: 50%;
+}
+
+.profile p,
+.profile span {
+	margin-left: 1rem;
+	font-size: 2.2rem;
+	font-weight: 500;
+}
+
+.summary {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+}
+
+.summary p {
+	padding-bottom: 1.2rem;
+	border-bottom: 1px solid var(--gray-color);
+}
+
+.summary div {
+	display: flex;
+	justify-content: space-around;
+}
+
+.links {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 1.8rem;
+	row-gap: 1.2rem;
+}
+
+.link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.4rem;
+}
+
+svg {
+	width: 3rem;
+	fill: var(--white-color);
+}
+
+svg:active {
+	fill: var(--gray-color);
+}
+
+.lower {
+	padding-top: 1.2rem;
+	border-top: 1px solid var(--gray-color);
+	height: 30%;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.lower span {
+	display: block;
+	font-weight: 700;
+}
+
+.skills {
+	list-style: square inside;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	row-gap: 2.4rem;
+	column-gap: 0.8rem;
+	font-size: 1.6rem;
+}
