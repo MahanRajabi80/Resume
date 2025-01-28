@@ -1,7 +1,12 @@
 :root {
-	--black-color: #212529;
-	--white-color: #f1f3f5;
-	--gray-color: #adb5bd;
+	--black-color: #1e1e2f;
+	--white-color: #e9ecef;
+	--gray-color: #6c757d;
+	--primary-color: #4caf50;
+	--secondary-color: #17a2b8;
+	--hover-color: #495057;
+	--selection-bg: #ffdd57;
+	--selection-color: #1e1e2f;
 }
 
 *,
@@ -11,11 +16,13 @@
 	padding: 0;
 	box-sizing: border-box;
 	user-select: text;
+	transition: all 0.3s ease-in-out;
 }
 
 html {
 	font-size: 62.5%;
 	background-color: var(--black-color);
+	scroll-behavior: smooth;
 }
 
 body {
@@ -24,15 +31,15 @@ body {
 	width: 100svw;
 	color: var(--white-color);
 	font-family: "Sora", sans-serif;
-	/* FONT-WEIGHT: 300 (LIGHT) - 400 (REGULAR) - 500 (MEDIUM) - 700 (BOLD) */
 	font-size: 1.8rem;
 	font-weight: 400;
 	overflow: hidden;
+	background: linear-gradient(135deg, var(--black-color), #2d2d44);
 }
 
 *::selection {
-	color: var(--black-color);
-	background-color: var(--white-color);
+	color: var(--selection-color);
+	background-color: var(--selection-bg);
 }
 
 ul,
@@ -43,13 +50,14 @@ ol {
 a:link,
 a:visited,
 .discord {
-	color: var(--white-color);
+	color: var(--primary-color);
 	text-decoration: none;
 	font-weight: 500;
 }
 
 a:hover {
 	text-decoration: underline;
+	color: var(--secondary-color);
 }
 
 a:active {
@@ -77,12 +85,15 @@ main {
 	display: flex;
 	flex-direction: column;
 	gap: 1.8rem;
+	align-items: center;
 }
 
 .profile img {
 	width: 16rem;
 	height: 16rem;
 	border-radius: 50%;
+	border: 3px solid var(--primary-color);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .profile p,
@@ -90,6 +101,8 @@ main {
 	margin-left: 1rem;
 	font-size: 2.2rem;
 	font-weight: 500;
+	color: var(--white-color);
+	text-align: center;
 }
 
 .summary {
@@ -101,6 +114,8 @@ main {
 .summary p {
 	padding-bottom: 1.2rem;
 	border-bottom: 1px solid var(--gray-color);
+	font-style: italic;
+	color: var(--gray-color);
 }
 
 .summary div {
@@ -120,6 +135,16 @@ main {
 	align-items: center;
 	justify-content: center;
 	gap: 0.4rem;
+	padding: 1rem 1.5rem;
+	border: 2px solid var(--primary-color);
+	border-radius: 8px;
+	background-color: var(--hover-color);
+	cursor: pointer;
+}
+
+.link:hover {
+	background-color: var(--primary-color);
+	color: var(--black-color);
 }
 
 svg {
@@ -139,11 +164,13 @@ svg:active {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	align-items: center;
 }
 
 .lower span {
 	display: block;
 	font-weight: 700;
+	color: var(--secondary-color);
 }
 
 .skills {
